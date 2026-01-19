@@ -3,109 +3,724 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="google-site-verification" content="idMCwLSbSFItFC47FYGblw7EXdi5vHYuYYr_qLjSLrQ" />
-
-  <title>Dasso Ahmed</title>
-  <meta content="This resumer is base on my professional experiences and encounters and my academic experience, 
-  Being a software developer for more than three years now, 
-  i am aquainted with tools to help you attain all your digital satisfaction. 
-  Am based in Douala-Cameroon " name="description">
-  <meta content="Dasso Ahmed,Ahmadou Roufaou Dasso,developer,software,cv,resume,work,jobs,Douala-Cameroon,Africa " name="keywords">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="idMCwLSbSFItFC47FYGblw7EXdi5vHYuYYr_qLjSLrQ">
+  
+  <title>Ahmadou Roufaou Dasso | Software Engineer</title>
+  
+  <meta name="description" content="Software Engineer with 3+ years of experience developing digital solutions. Based in Douala, Cameroon.">
+  <meta name="keywords" content="Ahmadou Roufaou Dasso, Software Engineer, Developer, Full Stack, Cameroon, Douala, Web Development">
+  <meta name="author" content="Ahmadou Roufaou Dasso">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Ahmadou Roufaou Dasso | Software Engineer">
+  <meta property="og:description" content="Software Engineer with 3+ years of experience developing digital solutions. Based in Douala, Cameroon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com">
+  
   <!-- Favicons -->
-   <link href="assets/img/fav.png" rel="icon">
-  <link href="assets/img/fav.png" rel="apple-touch-icon">
-
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+  
+  <!-- Preconnect for external resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+  <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+  
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Kelly - v4.0.1
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Optimized Color Styles for Better Readability -->
+  <style>
+    :root {
+      /* Optimized Color Palette for White Backgrounds */
+      --primary-color: #2563EB;      /* Calm blue - good contrast */
+      --primary-dark: #1D4ED8;       /* Darker blue */
+      --secondary-color: #334155;    /* Dark slate gray - better contrast */
+      --accent-color: #059669;       /* Green accent - eye-friendly */
+      --text-color: #1E293B;         /* Dark gray for main text (WCAG AAA compliant) */
+      --text-light: #475569;         /* Medium gray for secondary text */
+      --text-muted: #64748B;         /* Lighter gray for muted text */
+      --light-bg: #F8FAFC;           /* Very light background */
+      --border-color: #E2E8F0;       /* Light border color */
+      --card-bg: #FFFFFF;            /* White for cards */
+      --shadow-color: rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    }
+    
+    /* Base Typography */
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+      background-color: #FFFFFF;
+    }
+    
+    /* Headings with better contrast */
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--text-color);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      line-height: 1.2;
+    }
+    
+    h2 {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      line-height: 1.3;
+    }
+    
+    h3 {
+      font-size: 1.75rem;
+    }
+    
+    /* Paragraphs with optimized contrast */
+    p {
+      color: var(--text-color);
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+    
+    .lead {
+      font-size: 1.25rem;
+      color: var(--text-light);
+      font-weight: 400;
+    }
+    
+    /* Text muted classes */
+    .text-muted {
+      color: var(--text-muted) !important;
+    }
+    
+    .text-light {
+      color: var(--text-light) !important;
+    }
+    
+    /* Hero Section - Keeping original colors */
+    .hero-section {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    
+    .hero-section h1,
+    .hero-section h2,
+    .hero-section p {
+      color: white;
+    }
+    
+    .hero-section .lead {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* Profile Image */
+    .profile-image {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid black;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    /* Stats Section */
+    .stats-section {
+      background: var(--light-bg);
+    }
+    
+    .stats-section h3 {
+      color: var(--primary-color);
+    }
+    
+    .stats-section p {
+      color: var(--text-light);
+    }
+    
+    /* Skills Section - Better contrast badges */
+    .skills-section {
+      background: var(--card-bg);
+    }
+    
+    .skill-badge {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 25px;
+      margin: 5px;
+      display: inline-block;
+      transition: transform 0.3s, box-shadow 0.3s;
+      font-weight: 500;
+      border: none;
+      box-shadow: 0 4px 6px var(--shadow-color);
+    }
+    
+    .skill-badge:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px var(--shadow-color);
+    }
+    
+    /* Section Title */
+    .section-title h2 {
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+      border-radius: 2px;
+    }
+    
+    /* Cards - Better contrast */
+    .service-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid var(--border-color);
+      border-radius: 15px;
+      overflow: hidden;
+      background: var(--card-bg);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px var(--shadow-color);
+      border-color: var(--primary-color);
+    }
+    
+    .card {
+      border: 1px solid var(--border-color);
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    
+    .card-title {
+      color: var(--secondary-color);
+      font-weight: 600;
+    }
+    
+    .card-text {
+      color: var(--text-light);
+    }
+    
+    /* Project Cards */
+    .project-card {
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid var(--border-color);
+      background: var(--card-bg);
+      height: 100%;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px var(--shadow-color);
+    }
+    
+    .project-card .card-title {
+      color: var(--secondary-color);
+    }
+    
+    .project-card .card-text {
+      color: var(--text-light);
+    }
+    
+    /* Badges */
+    .badge {
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+    
+    .badge.bg-primary {
+      background-color: var(--primary-color) !important;
+    }
+    
+    .badge.bg-secondary {
+      background-color: var(--secondary-color) !important;
+    }
+    
+    /* Contact Info */
+    .contact-info {
+      background: var(--light-bg);
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid var(--border-color);
+    }
+    
+    /* Social Icons */
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--primary-color);
+      color: white;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    
+    .social-icon:hover {
+      background: var(--secondary-color);
+      transform: scale(1.1);
+      color: white;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--secondary-color);
+      color: white;
+    }
+    
+    .footer h3, 
+    .footer h5 {
+      color: white;
+    }
+    
+    .footer p {
+      color: rgba(255, 255, 255, 0.85);
+    }
+    
+    .footer .text-white-50 {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+    
+    .footer .text-white-50:hover {
+      color: white !important;
+    }
+    
+    /* Links */
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    a:hover {
+      color: var(--primary-dark);
+    }
+    
+    .nav-link {
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--primary-color);
+    }
+    
+    /* Buttons */
+    .btn {
+      font-weight: 500;
+      padding: 12px 28px;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    
+    .btn-light {
+      background: white;
+      color: var(--primary-color);
+      border: 2px solid white;
+    }
+    
+    .btn-light:hover {
+      background: transparent;
+      color: white;
+      border-color: white;
+    }
+    
+    .btn-outline-light {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+    
+    .btn-outline-light:hover {
+      background: white;
+      color: var(--primary-color);
+    }
+    
+    /* Header */
+    #header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .logo span {
+      color: var(--primary-color);
+    }
+    
+    /* Text color utilities */
+    .text-primary {
+      color: var(--primary-color) !important;
+    }
+    
+    .text-secondary {
+      color: var(--secondary-color) !important;
+    }
+    
+    /* Background utilities */
+    .bg-light {
+      background-color: var(--light-bg) !important;
+    }
+    
+    /* Border utilities */
+    .border-secondary {
+      border-color: var(--border-color) !important;
+    }
+    
+    /* Shadows */
+    .shadow-sm {
+      box-shadow: 0 2px 8px var(--shadow-color) !important;
+    }
+    
+    /* Accessibility Improvements */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    
+    /* Focus styles for accessibility */
+    :focus-visible {
+      outline: 3px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+    
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+      :root {
+        --text-color: #000000;
+        --text-light: #333333;
+        --primary-color: #0066CC;
+        --secondary-color: #000000;
+      }
+    }
+    
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-color: #E2E8F0;
+        --text-light: #CBD5E1;
+        --text-muted: #94A3B8;
+        --secondary-color: #F1F5F9;
+        --light-bg: #1E293B;
+        --card-bg: #0F172A;
+        --border-color: #334155;
+      }
+      
+      body {
+        background-color: #0F172A;
+      }
+      
+      .stats-section,
+      .featured-projects {
+        background: var(--light-bg);
+      }
+      
+      .card,
+      .project-card,
+      .service-card {
+        background: var(--card-bg);
+        border-color: var(--border-color);
+      }
+    }
+  </style>
 </head>
 
 <body>
 
+  <!-- ======= Skip to Main Content (Accessibility) ======= -->
+  <a href="#main-content" class="skip-link visually-hidden-focusable">
+    Skip to main content
+  </a>
+
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top shadow-sm">
     <div class="container-fluid d-flex justify-content-between align-items-center">
+      
+      <!-- Logo -->
+      <div class="logo-wrapper">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="fw-bold fs-4 text-primary">ARD</span>
+          <span class="ms-2 d-none d-md-inline fw-medium">Ahmadou Roufaou Dasso</span>
+        </a>
+      </div>
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html"></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+      <!-- Navigation -->
+      <nav id="navbar" class="navbar order-last order-lg-0" aria-label="Main Navigation">
+        <ul class="nav-list d-flex align-items-center m-0 p-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="bi bi-list"></i>
+        </button>
+      </nav>
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class=""></i></a>
-        <a href="#" class="facebook"><i class=""></i></a>
-        <a href="#" class="instagram"><i class=""></i></a>
-        <a href="#" class="linkedin"><i class=""></i></i></a>
+      <!-- Social Links -->
+      <div class="header-social-links d-none d-md-flex">
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon me-2">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon me-2">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="social-icon">
+          <i class="bi bi-twitter"></i>
+        </a>
       </div>
 
     </div>
-
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Ahmadou Roufa-ou Dasso</h1>
-      <h2>Software engineer in Douala Cameroon</h2>
-      <a href="about.html" class="btn-about">About Me</a>
-    </div>
-  </section><!-- End Hero -->
+  <!-- ======= Main Content ======= -->
+  <main id="main-content">
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero-section d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 text-center text-lg-start" data-aos="fade-right" data-aos-delay="100">
+            <h1 class="display-4 fw-bold mb-3">Ahmadou Roufaou Dasso</h1>
+            <h2 class="h3 mb-4">Software Engineer & Full Stack Developer</h2>
+            <p class="lead mb-4">With over 3 years of professional experience, I create digital solutions that drive business success. Based in Douala, Cameroon.</p>
+            <p class="text-light mb-5">Specializing in modern web technologies, cloud architecture, and scalable applications.</p>
+            <div class="hero-cta">
+              <a href="contact.html" class="btn btn-light btn-lg px-4 py-3 me-3">Get In Touch</a>
+              <a href="portfolio.html" class="btn btn-outline-light btn-lg px-4 py-3">View My Work</a>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-delay="200">
+            <div class="profile-image-container position-relative">
+              <img src="assets/img/profile.jpg" alt="Ahmadou Roufaou Dasso - Software Engineer" class="profile-image">
+              <div class="status-indicator position-absolute bottom-0 end-0 bg-success rounded-circle p-2 border border-3 border-white"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Hero -->
+
+    <!-- ======= Quick Stats Section ======= -->
+    <section id="stats" class="stats-section py-5">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 col-6 mb-4" data-aos="zoom-in">
+            <h3 class="display-4 fw-bold text-primary">3+</h3>
+            <p class="text-muted fw-medium">Years Experience</p>
+          </div>
+          <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+            <h3 class="display-4 fw-bold text-primary">50+</h3>
+            <p class="text-muted fw-medium">Projects Completed</p>
+          </div>
+          <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+            <h3 class="display-4 fw-bold text-primary">30+</h3>
+            <p class="text-muted fw-medium">Happy Clients</p>
+          </div>
+          <div class="col-md-3 col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+            <h3 class="display-4 fw-bold text-primary">10+</h3>
+            <p class="text-muted fw-medium">Technologies</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Stats -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills-section py-5">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2 class="mb-3">Technical Skills</h2>
+          <p class="text-muted lead">Technologies and frameworks I work with</p>
+        </div>
+        <div class="skills-container text-center">
+          <div class="skill-badge">JavaScript (ES6+)</div>
+          <div class="skill-badge">React & React Native</div>
+          <div class="skill-badge">Node.js</div>
+          <div class="skill-badge">TypeScript</div>
+          <div class="skill-badge">Python & Django</div>
+          <div class="skill-badge">PHP & Laravel</div>
+          <div class="skill-badge">MySQL & PostgreSQL</div>
+          <div class="skill-badge">MongoDB</div>
+          <div class="skill-badge">Git & GitHub</div>
+          <div class="skill-badge">Docker</div>
+          <div class="skill-badge">AWS Cloud</div>
+          <div class="skill-badge">REST APIs</div>
+          <div class="skill-badge">GraphQL</div>
+          <div class="skill-badge">Next.js</div>
+          <div class="skill-badge">Tailwind CSS</div>
+        </div>
+      </div>
+    </section><!-- End Skills -->
+
+    <!-- ======= Featured Projects ======= -->
+    <section id="featured-projects" class="featured-projects py-5 bg-light">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2 class="mb-3">Featured Projects</h2>
+          <p class="text-muted lead">Some of my recent work and solutions</p>
+        </div>
+        <div class="row g-4">
+          <!-- Project 1 -->
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="project-card card h-100">
+              <img src="assets/img/ecommercekhairutech.jpg" class="card-img-top" alt="E-commerce Platform with modern design">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-3">E-commerce Platform</h5>
+                <p class="card-text flex-grow-1">Full-featured online shopping platform with secure payment integration, inventory management, and real-time analytics dashboard.</p>
+                <div class="mt-auto">
+                  <span class="badge bg-primary me-2">React</span>
+                  <span class="badge bg-secondary me-2">Node.js</span>
+                  <span class="badge bg-primary">Stripe API</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card card h-100">
+              <img src="assets/img/erpkhairutech.jpg" class="card-img-top" alt="ERP System dashboard interface">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-3">ERP System</h5>
+                <p class="card-text flex-grow-1">software system that helps organisations streamline their core business processes—including finance, HR, manufacturing, supply chain, sales, and procurement—with a unified view of activity and provides a single source of truth.</p>
+                <div class="mt-auto">
+                  <span class="badge bg-primary me-2">Laravel</span>
+                  <span class="badge bg-secondary me-2">Vue.js</span>
+                  <span class="badge bg-primary">MySQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card card h-100">
+              <img src="assets/img/khairutechdeliveryapp.jpg" class="card-img-top" alt="Mobile delivery app interface">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-3">Delivery App</h5>
+                <p class="card-text flex-grow-1">Food and grocery delivery application with real-time tracking, payment processing, driver management, and customer reviews.</p>
+                <div class="mt-auto">
+                  <span class="badge bg-primary me-2">React Native</span>
+                  <span class="badge bg-secondary me-2">Firebase</span>
+                  <span class="badge bg-primary">Google Maps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Featured Projects -->
+
+  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer" class="footer bg-dark text-white py-5">
     <div class="container">
-      <h3>Ahmadou Rooufa-ou Dasso</h3>
-      <p>Software engineer in Douala Cameroon</p>
-      <div class="social-links">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h3 class="mb-3 fw-bold">Ahmadou Roufaou Dasso</h3>
+          <p class="mb-4">Software engineer passionate about creating impactful digital solutions. Specializing in full-stack development, cloud architecture, and scalable applications based in Douala, Cameroon.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/ahmed.nidal.311/" target="_blank" rel="noopener noreferrer" class="social-icon me-2" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/ahmedshaguy/" target="_blank" rel="noopener noreferrer" class="social-icon me-2" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-icon me-2" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+        </div>
         
-        <a href="https://www.facebook.com/ahmed.nidal.311/" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/ahmedshaguy/" class="instagram"><i class="bx bxl-instagram"></i></a>
-       
+        <div class="col-lg-4 mb-4">
+          <h5 class="mb-3 fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none hover-text-white">Home</a></li>
+            <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none hover-text-white">About</a></li>
+            <li class="mb-2"><a href="services.html" class="text-white-50 text-decoration-none hover-text-white">Services</a></li>
+            <li class="mb-2"><a href="portfolio.html" class="text-white-50 text-decoration-none hover-text-white">Portfolio</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none hover-text-white">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <h5 class="mb-3 fw-bold">Contact Info</h5>
+          <ul class="list-unstyled text-white-50">
+            <li class="mb-3 d-flex align-items-start">
+              <i class="bi bi-geo-alt me-2 mt-1"></i>
+              <span>Douala, Cameroon</span>
+            </li>
+            <li class="mb-3 d-flex align-items-start">
+              <i class="bi bi-envelope me-2 mt-1"></i>
+              <span>contact@ahmadoudasso.com</span>
+            </li>
+            <li class="mb-3 d-flex align-items-start">
+              <i class="bi bi-phone me-2 mt-1"></i>
+              <span>+237 652 507 582/ 655 838 075</span>
+            </li>
+            <li class="mb-3 d-flex align-items-start">
+              <i class="bi bi-clock me-2 mt-1"></i>
+              <span>Available for freelance projects</span>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>Ahmadou Roufaou Dasso</span></strong>. All Rights Reserved @2021
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/ -->
+      
+      <hr class="my-4 border-secondary">
+      
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="copyright">
+            &copy; <span id="current-year"></span> <strong>Ahmadou Roufaou Dasso</strong>. All Rights Reserved
+          </div>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="credits">
+            Designed with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://bootstrapmade.com/" class="text-white-50">KhairuTech</a>
+          </div>
+        </div>
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -120,8 +735,69 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+  <!-- Custom Scripts -->
+  <script>
+    // Set current year in copyright
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Mobile navigation toggle
+    document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
+      const navbar = document.getElementById('navbar');
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      navbar.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const navbar = document.getElementById('navbar');
+      const toggle = document.querySelector('.mobile-nav-toggle');
+      if (!navbar.contains(event.target) && !toggle.contains(event.target)) {
+        navbar.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Add hover text white class for footer links
+    document.querySelectorAll('.hover-text-white').forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        link.classList.add('text-white');
+        link.classList.remove('text-white-50');
+      });
+      link.addEventListener('mouseleave', () => {
+        link.classList.remove('text-white');
+        link.classList.add('text-white-50');
+      });
+    });
+    
+    // Initialize AOS animations
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    }
+  </script>
 
-google-site-verification: google293f2de0a3bf8ed4.html
+</body>
 
 </html>
