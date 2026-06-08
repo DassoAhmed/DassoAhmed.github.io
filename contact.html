@@ -31,6 +31,7 @@
     /* Custom validation styles */
     .form-group {
       position: relative;
+      margin-bottom: 1rem;
     }
     
     .form-control.error {
@@ -60,9 +61,23 @@
       padding: 1rem;
       border-radius: 0.25rem;
       display: none;
+      margin-bottom: 1rem;
     }
     
     .sent-message.show {
+      display: block;
+    }
+    
+    .error-alert {
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 1rem;
+      border-radius: 0.25rem;
+      display: none;
+      margin-bottom: 1rem;
+    }
+    
+    .error-alert.show {
       display: block;
     }
     
@@ -84,6 +99,10 @@
     button[type="submit"]:disabled {
       opacity: 0.6;
       cursor: not-allowed;
+    }
+    
+    button[type="submit"] {
+      position: relative;
     }
   </style>
 
@@ -138,8 +157,8 @@
           <h2>Contact</h2>
           <p>I have the pleasure to present you this work hope you have been amazed, 
             you can still have my address at rue ngosso ndin Bali With the following 
-            email: dassoahmed@gmail.com .</p>
-            <a href="mailto:dassoahmed@gmail.com">Send Email</a>
+            email: khairuenterprise@gmail.com .</p>
+            <a href="mailto:khairuenterprise@gmail.com">Send Email</a>
         </div>
 
         <div>
@@ -158,7 +177,7 @@
 
               <div class="align-items-center email">
                 <i class="bi bi-envelope"></i><br>
-                <a href="mailto:dassoahmed@gmail.com">dassoahmed@gmail.com</a>
+                <a href="mailto:khairuenterprise@gmail.com">khairuenterprise@gmail.com</a>
               </div>
 
               <div class="phone">
@@ -174,7 +193,8 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <!-- Important: This form uses Netlify Forms - data-netlify="true" is required -->
+            <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
               <input type="hidden" name="form-name" value="contact">
               
               <!-- Honeypot field for spam protection -->
@@ -185,7 +205,7 @@
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                  <div class="error-message" id="nameError">Please enter your name</div>
+                  <div class="error-message" id="nameError">Please enter your name (minimum 2 characters)</div>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
@@ -195,18 +215,22 @@
               
               <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                <div class="error-message" id="subjectError">Please enter a subject</div>
+                <div class="error-message" id="subjectError">Please enter a subject (minimum 3 characters)</div>
               </div>
               
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
-                <div class="error-message" id="messageError">Please enter your message</div>
+                <div class="error-message" id="messageError">Please enter your message (minimum 10 characters)</div>
               </div>
               
               <div class="my-3">
-                <div class="loading" id="loading">Sending your message...</div>
-                <div class="error-message" id="formError"></div>
-                <div class="sent-message" id="sentMessage">Your message has been sent. Thank you!</div>
+                <div class="loading" id="loading">
+                  <i class="bi bi-hourglass-split"></i> Sending your message...
+                </div>
+                <div class="error-alert" id="formError"></div>
+                <div class="sent-message" id="sentMessage">
+                  <i class="bi bi-check-circle"></i> Your message has been sent successfully! I'll get back to you soon.
+                </div>
               </div>
               
               <div class="text-center">
@@ -285,6 +309,7 @@
         if (name === '') {
           nameInput.classList.add('error');
           nameInput.classList.remove('success');
+          nameError.textContent = 'Please enter your name';
           nameError.classList.add('show');
           return false;
         } else if (name.length < 2) {
@@ -333,6 +358,7 @@
         if (subject === '') {
           subjectInput.classList.add('error');
           subjectInput.classList.remove('success');
+          subjectError.textContent = 'Please enter a subject';
           subjectError.classList.add('show');
           return false;
         } else if (subject.length < 3) {
@@ -356,6 +382,7 @@
         if (message === '') {
           messageInput.classList.add('error');
           messageInput.classList.remove('success');
+          messageError.textContent = 'Please enter your message';
           messageError.classList.add('show');
           return false;
         } else if (message.length < 10) {
@@ -394,66 +421,46 @@
       messageInput.addEventListener('input', validateMessage);
       messageInput.addEventListener('blur', validateMessage);
       
-      // Handle form submission
-      form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        // Hide any previous messages
-        sentMessage.classList.remove('show');
-        formError.classList.remove('show');
-        formError.textContent = '';
-        
-        // Validate form
+      // Handle form submission - Let Netlify handle it naturally
+      form.addEventListener('submit', function(e) {
+        // Only prevent default if client-side validation fails
         if (!validateForm()) {
+          e.preventDefault();
           formError.textContent = 'Please fix the errors above before submitting.';
           formError.classList.add('show');
-          return;
+          
+          // Hide error after 5 seconds
+          setTimeout(() => {
+            formError.classList.remove('show');
+          }, 5000);
+          
+          return false;
         }
         
         // Show loading state
         loading.classList.add('show');
         submitBtn.disabled = true;
         
-        try {
-          // Submit to Netlify Forms
-          const formData = new FormData(form);
-          
-          const response = await fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString()
-          });
-          
-          if (response.ok) {
-            // Show success message
-            loading.classList.remove('show');
-            sentMessage.classList.add('show');
-            
-            // Reset form
-            form.reset();
-            
-            // Remove validation styling
-            [nameInput, emailInput, subjectInput, messageInput].forEach(input => {
-              input.classList.remove('success', 'error');
-            });
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-              sentMessage.classList.remove('show');
-            }, 5000);
-          } else {
-            throw new Error('Form submission failed');
-          }
-        } catch (error) {
-          console.error('Error:', error);
-          loading.classList.remove('show');
-          formError.textContent = 'An error occurred. Please try again or email us directly.';
-          formError.classList.add('show');
-        } finally {
-          loading.classList.remove('show');
-          submitBtn.disabled = false;
-        }
+        // Hide any previous messages
+        sentMessage.classList.remove('show');
+        formError.classList.remove('show');
+        
+        // Let the form submit naturally to Netlify
+        return true;
       });
+      
+      // Check for URL parameters on page load (for Netlify form redirects)
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success') === 'true') {
+        loading.classList.remove('show');
+        submitBtn.disabled = false;
+        sentMessage.classList.add('show');
+        setTimeout(() => {
+          sentMessage.classList.remove('show');
+          // Clean URL without affecting page state
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }, 5000);
+      }
       
       // Initial validation on page load
       validateName();
